@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    width: 100vw;
+    background-color: #F6E9E9;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+.header{
+    background: #272121;
+    width: 100vw;
+    height: 100px;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.header p{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    font-size: 2vw;
+    color: snow;
+    margin: 0;
+    padding: 15px;
+    align-self: center;
+}
+.header p:hover{
+    border-bottom: 2px solid snow;
+}
+.maintext{
+    font-family: 'Bowlby One', cursive;
+    text-align: center;
+    align-self: center;
+    font-size: 3vw;
+    color: snow;
+    margin: 0;
+}
+.login {
+    width: 30%;
+    height: 30vh;
+    background-color: #ffe0d2;
+    border: 2px solid rgb(255, 138, 84);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(255, 122, 60, 0.7);
+    margin: 0 auto;
+    margin-top: 15vh;
+}
+.login label{
+    font-family: 'Russo One', sans-serif;
+    font-size: 28px;
+    display: block;
+    text-align: center;
+    margin-top: 2%;
+    color: #363333;
+    margin-bottom: 10%;
+}
+.login input {
+    font-family: 'Russo One', sans-serif;
+    outline-color: #ff7a3c;
+    display: block;
+    font-size: 18px;
+    border: 3px solid #FAB294;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px #ffffff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 11%;
+    width: 80%;
+    transition: 1s;
+}
+.login input:hover {
+    box-shadow: 0px 0px 10px 5px #ff7a3c;
+    transition: 1s;
+}
