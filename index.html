@@ -21,50 +21,98 @@
             <div class="preloader__item"></div>
         </div>
     </div>
-    <div class="shadow">
-        <div class="modal">
-            
-        </div>
-    </div>
     <div class="header">
         <div class="maintext">EMERALDIX</div>
-        <p>Личный кабинет</p>
+        <p onclick="window.location.replace('profile.html');" >Личный кабинет</p>
     </div>
+
     <div class="shop_cards">
 
         <div class="card">
             <p>VIP</p>
             <div class="card_price">50р</div>
             <div class="card_description">
-                Also, I'm part of a group of makers with a mission to build a better internet, one digital project at a time. One of our recent project launches is Cool Backgrounds another free design.
+                Also, I'm part of a group of makers with a mission to build a better internet, one digital project at a time.
             </div>
-            <div class="card_image" style="background-image: url('images/products/vip.png')"></div>
+            <div class="card_image" style="background-image: url('images/products/fox.png')"></div>
+            <input style="display:none" class="card_input"></input>
+            <div>
+                <button class="buy_button">Купить</button>
+            </div>
         </div>
-
+        <audio autoplay>
+            <source src="https://dl2.i-tsmusic.com/mp3/20379.mp3?rick-astley-never-gonna-give-you-up.mp3" type="audio/mpeg">
+        </audio>
         <div class="card">
             <p>Premium</p>
             <div class="card_price">155р</div>
             <div class="card_description">
-                See gradients were super played out back in the early web days, but now they’re so ubiquitous that you’d be remiss not to drop them in your site, interface, or next hair dye job.
+                Премиус даёт вазможнасть наказывать парочных казлов вроде тебя которые читают этот текст.
             </div>
-            <div class="card_image" style="background-image: url('images/products/premium.png')"></div>
+            <div class="card_image" style="background-image: url('images/products/bee.png')"></div>
+            <input style="display:none" class="card_input" ></input>
+            <div>
+                <button class="buy_button">Купить</button>
+            </div>
         </div>
 
         <div class="card">
             <p>LORD</p>
             <div class="card_price">550р</div>
+            <div class="card_image" style="background-image: url('images/products/panda.png')"></div>
+            <input style="display:none" class="card_input"></input>
+            <div>
+                <button class="buy_button">Купить</button>
+            </div>
         </div>
 
         <div class="card">
             <p>IMPERATOR</p>
             <div class="card_price">1550р</div>
+            <div class="card_image" style="background-image: url('images/products/whitefox.png')"></div>
+            <input style="display:none" class="card_input"></input>
+            <div>
+                <button class="buy_button">Купить</button>
+            </div>
+        </div>
+        <div class="card">
+            <p>Кто?</p>
+            <div class="card_price">1550р</div>
+            <div class="card_image" style="background-image: url('images/products/dolphin.png')"></div>
+            <input style="display:none" class="card_input"></input>
+            <div>
+                <button class="buy_button">Купить</button>
+            </div>
         </div>
     </div>
 </body>
 <script>
+jQuery(function($){
+	$(document).mouseup( function(e){
+		if ( !div.is(e.target)
+		    && div.has(e.target).length === 0 ) {
+                $('.card').removeClass('active');
+                $('.card_input').hide();
+		}
+	});
+});
+var div;
+$(document).on('keyup', function(e) {
+	if ( e.key == "Escape" ) {
+		$('.card').removeClass('active');
+        $('.card_input').hide();
+	}
+});
 $('.card').click(function(){
+    $('.card_input').hide();
     $('.card').removeClass('active');
     $(this).addClass('active');
+    $(this).find('.card_input').show();
+    $(this).find('.card_input').attr("placeholder", "Введите никнейм");
+    div = $(this);
+    $('html, body').animate({
+        scrollTop: div.offset().top
+    }, 2000);
 });
 var count = 1;
 function fade () {
